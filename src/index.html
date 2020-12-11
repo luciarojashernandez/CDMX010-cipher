@@ -6,9 +6,72 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
-    </div>
+    
+/*PANTALLA 1 DE INICIO*/
+    <section id="inicio">
+      <div id="root">
+          <h1>Bienvenide a <b>Notes Block</b></h1>
+          <br>
+          <p>Para entrar a tu cuenta ingresa tu contraseña:</p>
+          <br>
+          <form>
+              <input type="password" required=""> 
+          </form>   
+          <a href="translate.html"> <button>Ir a mis notas</button></a>
+      </div>
+      <div>
+        <img src="imagenes/logo.PNG">
+      </div>
+   </section>
+
+//PANTALLA 2 DE CIFRADO
+   <section id="cifrado">
+//menú
+      <div id="menú" class="menú">
+      <header>
+        <nav>
+        <ul>
+          <li><a href="inicio">Inicio</a></li>
+          <li><a href="micuenta">Mi cuenta</a></li>
+          <li><a href="cifrado">Agregar nota</a></li>
+        </ul>
+        </nav>
+      </header>
+      </div>
+
+//instrucciones para cifrar
+      <div id="instrucciones" class="h2">
+        <h2><b>Instrucciones</b></h2>
+        <br>
+        <p>Para escribir una nota y guardarla con el cifrado,<br> 
+          sólo escribe tu texto en el recuadro de la izquierda.</p>
+      </div>
+
+//Botones de cifrado
+      <div id="cifrar" class="cifrar">
+        <input type= "text" id="input" placeholder="Escribe aquí tu nota">
+        <button id="cifrar">Cifrar mi nota</button>
+        <input type= "text" id="output" placeholder="Para descifrar, escribe aquí tu nota">
+        <button id="descifrar">Descifrar mi nota</button>
+      </div>
+    </section>
+
+//PANTALLA 3 DE NOTAS
+    <section id="cifrado">
+//menú
+      <div id="menú" class="menú">
+      <header>
+        <nav>
+        <ul>
+          <li><a href="inicio">Inicio</a></li>
+          <li><a href="micuenta">Mi cuenta</a></li>
+          <li><a href="cifrado">Agregar nota</a></li>
+        </ul>
+        </nav>
+      </header>
+      </div>
+    </section>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>

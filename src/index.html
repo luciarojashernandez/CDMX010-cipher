@@ -6,40 +6,48 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
-/*PANTALLA 1 DE INICIO*/
-    <section id="inicio">
-      <div id="root">
-          <h1>Bienvenide a <b>Notes Block</b></h1>
-          <br>
-          <p>Para entrar a tu cuenta ingresa tu contraseña:</p>
-          <br>
-          <form>
-              <input type="password" required=""> 
-          </form>   
-          <a href="translate.html"> <button>Ir a mis notas</button></a>
+
+<!-- PANTALLA 0 DE PASSWORD
+    <section id="password" class="password">
+      <div class="entra">
+        <h1>Ingresa a tu cuenta</h1>
+        <br>
+        <button onclick="comenzar()">Haz clic para iniciar</button>
       </div>
+      <div>
+        <img src="imagenes/logo.PNG">
+      </div>
+    </section> -->
+
+<!-- MENÚ -->
+    <div id="sidebar">
+      <div class="barra">
+        <span>&#9776;</span>
+      </div>
+      <ul>
+        <li>
+          <img src="imagenes/logobarra.jpg" alt="logotipo" class="logobarra">
+        </li>
+        <li>Mi cuenta</li>
+        <li>Nueva nota</li>
+        <li>Salir</li>
+      </ul>
+    </div>
+
+<!-- PANTALLA 1 DE INICIO -->
+    <section id="inicio" class="inicio">
+      <h1 id="bienvenida"></h1>
+      <button onclick="irnotas()">Mis notas</button>
+      <button onclick="nuevanota()">Nueva nota</button>
       <div>
         <img src="imagenes/logo.PNG">
       </div>
    </section>
 
-//PANTALLA 2 DE CIFRADO
+<!-- PANTALLA 2 DE CIFRADO -->
    <section id="cifrado">
-//menú
-      <div id="menú" class="menú">
-      <header>
-        <nav>
-        <ul>
-          <li><a href="inicio">Inicio</a></li>
-          <li><a href="micuenta">Mi cuenta</a></li>
-          <li><a href="cifrado">Agregar nota</a></li>
-        </ul>
-        </nav>
-      </header>
-      </div>
 
-//instrucciones para cifrar
+<!-- instrucciones para cifrar -->
       <div id="instrucciones" class="h2">
         <h2><b>Instrucciones</b></h2>
         <br>
@@ -47,7 +55,7 @@
           sólo escribe tu texto en el recuadro de la izquierda.</p>
       </div>
 
-//Botones de cifrado
+<!-- Botones de cifrado -->
       <div id="cifrar" class="cifrar">
         <input type= "text" id="input" placeholder="Escribe aquí tu nota">
         <button id="cifrar">Cifrar mi nota</button>
@@ -56,22 +64,11 @@
       </div>
     </section>
 
-//PANTALLA 3 DE NOTAS
-    <section id="cifrado">
-//menú
-      <div id="menú" class="menú">
-      <header>
-        <nav>
-        <ul>
-          <li><a href="inicio">Inicio</a></li>
-          <li><a href="micuenta">Mi cuenta</a></li>
-          <li><a href="cifrado">Agregar nota</a></li>
-        </ul>
-        </nav>
-      </header>
-      </div>
-    </section>
+<!-- PANTALLA 3 DE NOTAS -->
+    <section id="micuenta">
 
-    <script src="index.js" type="module"></script>
+    </section>
+    <script src="index.js" ></script>
+    <!-- <script src="index.js" type="module"></script> -->
   </body>
 </html>

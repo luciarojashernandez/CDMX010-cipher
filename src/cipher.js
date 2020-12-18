@@ -1,39 +1,36 @@
-/*const cipher = {
-  encode: function() {
-    let text = 'adriana';
-    for(let i = 0; i < text.length; i++){
-      console.log(text[i]);
-    }
-  },
-  decode
-};
+// const cipher = {
+//   encode: function() {
+//     let text = 'adriana';
+//     for(let i = 0; i < text.length; i++){
+//       console.log(text[i]);
+//     }
+//   },
+//   decode
+// };
 
-export default cipher;*/
+// export default cipher;
 
-/*const cipher = {
-  function encode13(texto) {
-    for (let i = 0; i < textp.length; i ++)
-    console.log (texto[i]);
+const cipher = {
+  encode (string, offset) {
+    let result = "", code;
+    for (let i=0; i<string.length;i++){
+      if(string.charCodeAt(i)>=65 && string.charCodeAt(i)<=90){
+        code = (((string.charCodeAt(i)-65)+offset)%26)+65;
+        result+=String.fromCharCode(code);
+      }
+      else if (string.charCodeAt(i)>=97 && string.charCodeAt(i)<=122){
+        code = (((string.charCodeAt(i)-97)+offset)%26)+97;
+        result+=String.fromCharCode(code);
+      }
+      else if (string.charCodeAt(i)===32){
+        code=32;
+        result+=String.fromCharCode(code);
+      }
+    } return result;
     
   }
-}
+  
+};
+console.log(encode("Hola", 2));
 
-encode13 ("A")*/
-
-function rot13(texto) {
-  let decode = "";
-  for (let i = 0; i < texto.length; i ++){
-    let asciiNum = texto [i].charCodeAt();
-    if (asciiNum >= 65 && asciiNum <= 77) {
-      decode += String.fromCharCode (asciiNum + 13);
-  } else if (asciiNum >= 78 && asciiNum <= 90){
-      decode += String.fromCharCode (asciiNum -13);
-  } else {
-      decode += [i];
-  }
-  return decode;
-}
-}
-// }
-
-rot13 ("A");
+export default cipher;

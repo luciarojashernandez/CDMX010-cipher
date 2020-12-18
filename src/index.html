@@ -6,69 +6,79 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+  
+  <header id="header" class="header">
+    <img src="imagenes/logoheader.png" alt="Logo" class="logo">
+    <h1>Notes Block para escritorio</h1>
+  </header>
 
-<!-- PANTALLA 0 DE PASSWORD
-    <section id="password" class="password">
-      <div class="entra">
-        <h1>Ingresa a tu cuenta</h1>
-        <br>
-        <button onclick="comenzar()">Haz clic para iniciar</button>
-      </div>
-      <div>
-        <img src="imagenes/logo.PNG">
-      </div>
-    </section> -->
-
-<!-- MENÚ -->
+  <!-- MENÚ -->
+  <nav>
     <div id="sidebar">
-      <div class="barra">
-        <span>&#9776;</span>
-      </div>
-      <ul>
-        <li>
-          <img src="imagenes/logobarra.jpg" alt="logotipo" class="logobarra">
-        </li>
-        <li>Mi cuenta</li>
-        <li>Nueva nota</li>
-        <li>Salir</li>
+      <ul class="btnMenu">
+        <li><input type="button" id="btnMyNotes" value="Mis notas"></li>
+        <li><input type="button" id="btnNewNote" value="Nueva nota"></li>
+        <li><input type="button" id="btnStart" value="Inicio"></li>
       </ul>
     </div>
+  </nav>
 
-<!-- PANTALLA 1 DE INICIO -->
-    <section id="inicio" class="inicio">
-      <h1 id="bienvenida"></h1>
-      <button onclick="irnotas()">Mis notas</button>
-      <button onclick="nuevanota()">Nueva nota</button>
-      <div>
-        <img src="imagenes/logo.PNG">
-      </div>
-   </section>
+  <div class="clearfix"></div>
+
+  <!-- INICIO -->
+  <section id="start" class="start">
+    <container class="contStart">
+      <h1>Bienvenide a tu cuenta</h1>
+      <br>
+    <div id="logoStart">
+      <img src="imagenes/logo.PNG">
+    </div>
+    </container>
+  </section>
 
 <!-- PANTALLA 2 DE CIFRADO -->
-   <section id="cifrado">
+  <section id="nuevaNota">
 
 <!-- instrucciones para cifrar -->
-      <div id="instrucciones" class="h2">
-        <h2><b>Instrucciones</b></h2>
-        <br>
-        <p>Para escribir una nota y guardarla con el cifrado,<br> 
-          sólo escribe tu texto en el recuadro de la izquierda.</p>
-      </div>
-
+    <div id="instrucciones" class="h2">
+      <h2><b>Instrucciones</b></h2><br> <br>
+      <p>Para escribir una nota y guardarla con el cifrado:<br>
+        1. Elije el número clave de cifrado y descifrado<br>
+        2. Para cifrar escribe tu texto en el primer recuadro<br>
+        3. Para decsifrar escribre tu texto en el segundo recuadro<br> <br> <br> </p>
+    </div>
+<!-- Select/offset -->
+    <div id="select">
+      <p>Elige el número clave para esta nota</p><br>
+      <input type="number" id="offset" min="1" max="13"><br> <br>
+    </div>
 <!-- Botones de cifrado -->
-      <div id="cifrar" class="cifrar">
-        <input type= "text" id="input" placeholder="Escribe aquí tu nota">
-        <button id="cifrar">Cifrar mi nota</button>
-        <input type= "text" id="output" placeholder="Para descifrar, escribe aquí tu nota">
-        <button id="descifrar">Descifrar mi nota</button>
-      </div>
-    </section>
+    <div id="cipherText" class="cipherText">
+      <input type= "text" id="userStringIn" placeholder="Para cifrar, escribe aquí tu nota"><br><br>
+      <button id="cifrar" class="cifrar">Cifrar mi nota</button><br><br><br>
+      <input type= "text" id="userStringOut" placeholder="Para descifrar, escribe aquí tu nota"><br><br>
+      <button id="descifrar" class="descifrar">Descifrar mi nota</button><br><br><br>
+    </div>
+  </section>
 
 <!-- PANTALLA 3 DE NOTAS -->
-    <section id="micuenta">
+  <section id="myNotes">
+    <div>
+      <h2>Mis notas archivadas</h2>
+    </div>
+  </section>
 
-    </section>
+<!-- FOOTER -->
+  <section>
+    <footer>
+      <div id="logoStart">
+        <img src="imagenes/logobarra.jpg">
+      </div>
+      <p>Lu Rojas CipherProyect ©2020 </p>
+    </footer>
+  </section>
+  
     <script src="index.js" ></script>
-    <!-- <script src="index.js" type="module"></script> -->
+    <script src="index.js" type="module"></script>
   </body>
 </html>

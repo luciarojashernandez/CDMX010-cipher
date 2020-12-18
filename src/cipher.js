@@ -10,8 +10,7 @@
 
 // export default cipher;
 
-const cipher = {
-  encode (string, offset) {
+const encode = (string, offset)=>{
     let result = "", code;
     for (let i=0; i<string.length;i++){
       if(string.charCodeAt(i)>=65 && string.charCodeAt(i)<=90){
@@ -28,9 +27,7 @@ const cipher = {
       }
     } return result;
     
-  }
-  
-};
-console.log(encode("Hola", 2));
+  };
+console.log(encode("Lu", 2));
 
-export default cipher;
+export default encode;

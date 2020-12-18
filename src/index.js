@@ -1,4 +1,4 @@
-import cipher from './cipher.js';
+import encode from './cipher.js';
 
 console.log(cipher);
 

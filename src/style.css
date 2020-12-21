@@ -79,6 +79,16 @@ nav input {
     max-width: 580px;
 }
 
+#newNote{
+    padding: 30px 0;
+    color:  #545454;
+    font: bold 30px;
+    margin: auto;
+    align-content: center;
+    width: 100%;
+    max-width: 580px;
+}
+
 #instrucciones{
     padding: 30px 0;
     color:  #545454;
@@ -95,6 +105,33 @@ nav input {
     align-content: center;
     width: 100%;
     max-width: 580px;
+}
+
+#select input{
+    border: 2px solid #502c2c;    
+}
+#select input:focus{
+    background: lightgrey;    
+}
+
+#form button{
+    color:  #545454;
+    background: #ffde59;
+    border: #ffde59;
+}
+#form button:focus {
+    color: #ffde59;
+    background:#545454;
+    border: #545454;
+}
+
+#form textarea {
+    width:400px;
+    height:100px;
+    border: 2px solid #502c2c;
+}
+#form textarea:focus{
+    background: lightgrey;
 }
 
 .cipherText input{

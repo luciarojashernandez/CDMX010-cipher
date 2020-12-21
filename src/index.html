@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
+    <link rel="icon" href="imagenes/ícono.ico">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -37,7 +38,7 @@
   </section>
 
 <!-- PANTALLA 2 DE CIFRADO -->
-  <section id="nuevaNota">
+  <section id="newNote">
 
 <!-- instrucciones para cifrar -->
     <div id="instrucciones" class="h2">
@@ -50,14 +51,17 @@
 <!-- Select/offset -->
     <div id="select">
       <p>Elige el número clave para esta nota</p><br>
-      <input type="number" id="offset" min="1" max="13"><br> <br>
+      <input type="number" id="desplazamiento" class="desplazamiento" value="1" min="1" max="13"><br> <br>
     </div>
+    <div class="resultado"></div>
 <!-- Botones de cifrado -->
     <div id="cipherText" class="cipherText">
-      <input type= "text" id="userStringIn" placeholder="Para cifrar, escribe aquí tu nota"><br><br>
-      <button id="cifrar" class="cifrar">Cifrar mi nota</button><br><br><br>
-      <input type= "text" id="userStringOut" placeholder="Para descifrar, escribe aquí tu nota"><br><br>
-      <button id="descifrar" class="descifrar">Descifrar mi nota</button><br><br><br>
+      <form id="form">
+      <textarea id="userInput" placeholder="Para cifrar, escribe aquí tu nota"></textarea><br><br>
+      <button type="submit" id="btnCifrar" class="cifrar">Cifrar mi nota</button><br><br><br>
+      <textarea id="userOutput" placeholder="Para descifrar, escribe aquí tu nota"></textarea> <br><br>
+      <button type="submit" id="btnDescifrar" class="descifrar">Descifrar mi nota</button><br><br><br>
+      </form>
     </div>
   </section>
 

@@ -24,7 +24,7 @@
     </div>
   </nav>
 
-  <div class="clearfix"></div>
+  <!-- <div class="clearfix"></div> -->
 
   <!-- INICIO -->
   <section id="start" class="start">
@@ -53,14 +53,14 @@
       <p>Elige el número clave para esta nota</p><br>
       <input type="number" id="desplazamiento" class="desplazamiento" value="1" min="1" max="13"><br> <br>
     </div>
-    <div class="resultado"></div>
+    
 <!-- Botones de cifrado -->
     <div id="cipherText" class="cipherText">
       <form id="form">
-      <textarea id="userInput" placeholder="Para cifrar, escribe aquí tu nota"></textarea><br><br>
-      <button type="submit" id="btnCifrar" class="cifrar">Cifrar mi nota</button><br><br><br>
-      <textarea id="userOutput" placeholder="Para descifrar, escribe aquí tu nota"></textarea> <br><br>
-      <button type="submit" id="btnDescifrar" class="descifrar">Descifrar mi nota</button><br><br><br>
+      <textarea name=userInput value="" id="userInput" placeholder="Para cifrar, escribe aquí tu nota"></textarea><br><br>
+      <button  id="btnFunciona" class="cifrar">Cifrar mi nota</button><br><br><br>
+      <textarea name=userOutput value="" id="userOutput" placeholder="Para descifrar, escribe aquí tu nota"></textarea> <br><br>
+      <button  id="btnDescifrar" class="descifrar">Descifrar mi nota</button><br><br><br>
       </form>
     </div>
   </section>
@@ -82,7 +82,6 @@
     </footer>
   </section>
   
-    <script src="index.js" ></script>
     <script src="index.js" type="module"></script>
   </body>
 </html>

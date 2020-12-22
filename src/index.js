@@ -1,55 +1,74 @@
 
-import encode from './cipher.js';
+import cipher from './cipher.js'
 
-console.log(encode);
+// console.log(cipher);
 
-document.getElementById ("start").style.display = "none"
-document.getElementById ("myNotes").style.display = "none"
-document.getElementById ("newNote").style.display = "none"
+// document.getElementById ("start").style.display = "none"
+// document.getElementById ("myNotes").style.display = "none"
+// document.getElementById ("newNote").style.display = "none"
 
-// Botón menú IR A INICIO
-let inicio = document.getElementById("btnStart");
-inicio.addEventListener("click",goInicio);
-function goInicio() {
-  document.getElementById ("newNote").style.display = "none";
-  document.getElementById ("myNotes").style.display = "none";  
-  document.getElementById ("start").style.display = "block";
-}
+// // Botón menú IR A INICIO
+// let inicio = document.getElementById("btnStart");
+// inicio.addEventListener("click",goInicio);
+// function goInicio() {
+//   document.getElementById ("newNote").style.display = "none";
+//   document.getElementById ("myNotes").style.display = "none";  
+//   document.getElementById ("start").style.display = "block";
+// }
 
-// Botón menú IR A NUEVA NOTA
-let nvaNota = document.getElementById("btnNewNote");
-nvaNota.addEventListener("click",goNewNote);
-function goNewNote() {
-  document.getElementById ("start").style.display = "none";
-  document.getElementById ("myNotes").style.display = "none";
-  document.getElementById ("newNote").style.display = "block";
-}
+// // Botón menú IR A NUEVA NOTA
+// let nvaNota = document.getElementById("btnNewNote");
+// nvaNota.addEventListener("click",goNewNote);
+// function goNewNote() {
+//   document.getElementById ("start").style.display = "none";
+//   document.getElementById ("myNotes").style.display = "none";
+//   document.getElementById ("newNote").style.display = "block";
+// }
 
-// Botón menú IR A MIS NOTAS
-let misNotas = document.getElementById("btnMyNotes");
-misNotas.addEventListener("click",goMyNotes);
-function goMyNotes() {
-  document.getElementById ("start").style.display = "none";
-  document.getElementById ("newNote").style.display = "none";
-  document.getElementById ("myNotes").style.display = "block";  
-}
+// // Botón menú IR A MIS NOTAS
+// let misNotas = document.getElementById("btnMyNotes");
+// misNotas.addEventListener("click",goMyNotes);
+// function goMyNotes() {
+//   document.getElementById ("start").style.display = "none";
+//   document.getElementById ("newNote").style.display = "none";
+//   document.getElementById ("myNotes").style.display = "block";  
+// }
 
-document.getElementById("btnCifrar");
+document.getElementById("btnFunciona").addEventListener("click", 
+function enviarTexto() {
+  let textoCifrado=document.getElementById("userInput").value;
+  let desplazamientoLet=document.getElementById("desplazamiento").value;
+  let userOutput=document.getElementById("userOutput");
+  const resultado=cipher.encode(textoCifrado,desplazamientoLet);
+  document.getElementById("userOutput").value==textoCifrado;
+  userOutput.innerHTML=resultado;  
+  console.log(resultado);
+} 
+);
+
+
 document.getElementById("btnDescifrar");
-document.getElementById("userInput");
+document.getElementById("userInput").value="";
 document.getElementById("userOutput");
 document.getElementById("desplazamiento");
 
+  // let start=document.getElementById ("start");
+  // start.style.display="none";
+  // let newNote=document.getElementById ("newNote");
+  // newNote.style.display="block";
+  // let myNotes=document.getElementById ("myNotes");
+  // myNotes.style.display="none";
 
-let msgUser=document.getElementById()
+// let mostrarTexto = document.getElementById("btnCifrar");
+// mostrarTexto.addEventListener("click", enviarTexto);
+// function enviarTexto() {
+//   let textoCifrado=document.getElementById("userOutput").value;
+//   document.getElementById("userInput").value==textoCifrado;
+//   userOutput.innerHTML=textoCifrado;
+// }
+// console.log(mostrarTexto);
 
-let verTextCifrado=document.getElementById("btnCifrar");
-verTextCifrado.addEventListener("click",textCifrado);
-function textCifrado() {
-  let msgCifrado=document.querySelector(encode).value;
-  document.querySelector(msgCifrado).innerHTML+=userOutput;
-}
-console.log(verTextCifrado); 
+
 
 
 

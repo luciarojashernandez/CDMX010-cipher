@@ -1,38 +1,38 @@
 
 import cipher from './cipher.js'
 
-// console.log(cipher);
+ console.log(cipher);
 
-// document.getElementById ("start").style.display = "none"
-// document.getElementById ("myNotes").style.display = "none"
-// document.getElementById ("newNote").style.display = "none"
+ document.getElementById ("start").style.display = "none"
+ document.getElementById ("myNotes").style.display = "none"
+ document.getElementById ("newNote").style.display = "none"
 
-// // Botón menú IR A INICIO
-// let inicio = document.getElementById("btnStart");
-// inicio.addEventListener("click",goInicio);
-// function goInicio() {
-//   document.getElementById ("newNote").style.display = "none";
-//   document.getElementById ("myNotes").style.display = "none";  
-//   document.getElementById ("start").style.display = "block";
-// }
+ // Botón menú IR A INICIO
+ let inicio = document.getElementById("btnStart");
+ inicio.addEventListener("click",goInicio);
+ function goInicio() {
+   document.getElementById ("newNote").style.display = "none";
+   document.getElementById ("myNotes").style.display = "none";  
+   document.getElementById ("start").style.display = "block";
+ }
 
-// // Botón menú IR A NUEVA NOTA
-// let nvaNota = document.getElementById("btnNewNote");
-// nvaNota.addEventListener("click",goNewNote);
-// function goNewNote() {
-//   document.getElementById ("start").style.display = "none";
-//   document.getElementById ("myNotes").style.display = "none";
-//   document.getElementById ("newNote").style.display = "block";
-// }
+ // Botón menú IR A NUEVA NOTA
+ let nvaNota = document.getElementById("btnNewNote");
+ nvaNota.addEventListener("click",goNewNote);
+ function goNewNote() {
+   document.getElementById ("start").style.display = "none";
+   document.getElementById ("myNotes").style.display = "none";
+   document.getElementById ("newNote").style.display = "block";
+ }
 
-// // Botón menú IR A MIS NOTAS
-// let misNotas = document.getElementById("btnMyNotes");
-// misNotas.addEventListener("click",goMyNotes);
-// function goMyNotes() {
-//   document.getElementById ("start").style.display = "none";
-//   document.getElementById ("newNote").style.display = "none";
-//   document.getElementById ("myNotes").style.display = "block";  
-// }
+ // Botón menú IR A MIS NOTAS
+ let misNotas = document.getElementById("btnMyNotes");
+ misNotas.addEventListener("click",goMyNotes);
+ function goMyNotes() {
+   document.getElementById ("start").style.display = "none";
+   document.getElementById ("newNote").style.display = "none";
+   document.getElementById ("myNotes").style.display = "block";  
+}
 
 document.getElementById("btnFunciona").addEventListener("click", 
 function enviarTexto() {

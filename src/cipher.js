@@ -5,19 +5,21 @@ const cipher={
     for (let i = 0; i < userInput.length; i++){
       if(userInput.charCodeAt(i) >= 65 && userInput.charCodeAt(i) <= 90){
         code = (((userInput.charCodeAt(i) - 65) + desplazamiento) % 26) + 65;
-        result += String.fromCharCode(code);
+        // result += String.fromCharCode(code);
+        console.log(result);
       }
       else if (userInput.charCodeAt(i) >= 97 && userInput.charCodeAt(i) <= 122) {
         code = (((userInput.charCodeAt(i) - 97) + desplazamiento) % 26) + 97;
-        result += String.fromCharCode(code);
+        // result += String.fromCharCode(code);
      }
      else if (userInput.charCodeAt(i) === 32) {
       code = 32;
-      result += String.fromCharCode(code);
+      // result += String.fromCharCode(code);
      }
-  } return result; 
+     result += String.fromCharCode(code);
+  }  return result;    
+},  
 } 
-}
 
 export default cipher;
 

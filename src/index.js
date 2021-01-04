@@ -34,8 +34,8 @@ import cipher from './cipher.js'
    document.getElementById ("myNotes").style.display = "block";  
 }
 
-document.getElementById("btnFunciona").addEventListener("click", 
-function enviarTexto() {
+document.getElementById("btnCifrar").addEventListener("click", 
+function enviarTextoCifrado() {
   let textoCifrado=document.getElementById("userInput").value;
   let desplazamientoLet=document.getElementById("desplazamiento").value;
   let userOutput=document.getElementById("userOutput");
@@ -46,9 +46,20 @@ function enviarTexto() {
 } 
 );
 
+document.getElementById("btnDescifrar").addEventListener("click",
+function enviarTextoDescifrado() {
+  let textoDescifrado=document.getElementById("userOutput").value;
+  let desplazamiento=document.getElementById("desplazamiento").value;
+  let userInput=document.getElementById("userInput");
+  const resultado=cipher.decode(textoDescifrado,desplazamiento);
+  document.getElementById("userInput").value==textoDescifrado;
+  userInput.innerHTML=resultado;
+  console.log(resultado); 
+}
+)
 
 document.getElementById("btnDescifrar");
-document.getElementById("userInput").value="";
+document.getElementById("userInput");
 document.getElementById("userOutput");
 document.getElementById("desplazamiento");
 

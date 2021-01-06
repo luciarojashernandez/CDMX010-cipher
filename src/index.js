@@ -6,6 +6,10 @@ import cipher from './cipher.js'
  document.getElementById ("start").style.display = "none"
  document.getElementById ("myNotes").style.display = "none"
  document.getElementById ("newNote").style.display = "none"
+ document.getElementById("btnDescifrar");
+ document.getElementById("userInput");
+ document.getElementById("userOutput");
+ document.getElementById("desplazamiento");
 
  // Botón menú IR A INICIO
  let inicio = document.getElementById("btnStart");
@@ -34,96 +38,32 @@ import cipher from './cipher.js'
    document.getElementById ("myNotes").style.display = "block";  
 }
 
+//botón pra cifrar mi nota
 document.getElementById("btnCifrar").addEventListener("click", 
 function enviarTextoCifrado() {
   let textoCifrado=document.getElementById("userInput").value;
-  let desplazamientoLet=document.getElementById("desplazamiento").value;
+  let desplazamiento=document.getElementById("desplazamiento").value;
   let userOutput=document.getElementById("userOutput");
-  const resultado=cipher.encode(textoCifrado,desplazamientoLet);
+  const resultado=cipher.encode(textoCifrado,desplazamiento);
   document.getElementById("userOutput").value==textoCifrado;
   userOutput.innerHTML=resultado;  
-  console.log(resultado);
 } 
 );
 
+//botón pra descifrar mi nota
 document.getElementById("btnDescifrar").addEventListener("click",
 function enviarTextoDescifrado() {
   let textoDescifrado=document.getElementById("userOutput").value;
   let desplazamiento=document.getElementById("desplazamiento").value;
   let userInput=document.getElementById("userInput");
-  const resultado=cipher.decode(textoDescifrado,desplazamiento);
+  const res=cipher.decode(textoDescifrado,desplazamiento);
   document.getElementById("userInput").value==textoDescifrado;
-  userInput.innerHTML=resultado;
-  console.log(resultado); 
+  userInput.innerHTML=res; 
 }
-)
-
-document.getElementById("btnDescifrar");
-document.getElementById("userInput");
-document.getElementById("userOutput");
-document.getElementById("desplazamiento");
-
-  // let start=document.getElementById ("start");
-  // start.style.display="none";
-  // let newNote=document.getElementById ("newNote");
-  // newNote.style.display="block";
-  // let myNotes=document.getElementById ("myNotes");
-  // myNotes.style.display="none";
-
-// let mostrarTexto = document.getElementById("btnCifrar");
-// mostrarTexto.addEventListener("click", enviarTexto);
-// function enviarTexto() {
-//   let textoCifrado=document.getElementById("userOutput").value;
-//   document.getElementById("userInput").value==textoCifrado;
-//   userOutput.innerHTML=textoCifrado;
-// }
-// console.log(mostrarTexto);
+);
 
 
 
-
-
-// let userStringIn = document.getElementById("string")
-// let cipherText = document.getElementById("cifrar");
-// cipherText.addEventListener("click",cifrado);
-// function cifrado() {
-//   document.getElementById("encode").innerHTML="result";
-
-// document.getElementById("btnCifrar");
-// document.getElementById("btnDescifrar");
-// document.getElementById("userInput");
-
-
-
-
-// console.log(offset);
-
-// let cifrarTexto = document.getElementById("btnCifrar");
-// cifrarTexto.addEventListener("click",encodeMsg);
-// function encodeMsg() {
-//   document.getElementById ("newNote").style.display = "none";
-//   document.getElementById ("myNotes").style.display = "none";  
-//   document.getElementById ("start").style.display = "block";
-// }
-
-  //  decode = (string, offset)=>{
-  //      let resultDecode = "", code;
-  //        for (let i=0; i<string.length;i++){
-  //          if(string.charCodeAt(i)<=65 && string.charCodeAt(i)>=90){
-  //            code = (((string.charCodeAt(i)-65)+offset)%26)-65;
-  //            resultDecode+=String.fromCharCode(code);
-  //          }
-  //          else if (string.charCodeAt(i)<=97 && string.charCodeAt(i)>=122){
-  //            code = (((string.charCodeAt(i)-97)+offset)%26)-97;
-  //            resultDecode+=String.fromCharCode(code);
-  //          }
-  //          else if (string.charCodeAt(i)===32){
-  //            code=32;
-  //            resultDecode+=String.fromCharCode(code);
-  //          }
-  //        } return resultDecode;       
-  //      };
-  //    console.log(decode("jk",2));
 
   
 

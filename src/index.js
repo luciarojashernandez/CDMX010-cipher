@@ -40,13 +40,13 @@ import cipher from './cipher.js'
 
 //botón pra cifrar mi nota
 document.getElementById("btnCifrar").addEventListener("click", 
-function enviarTextoCifrado() {
-  let textoCifrado=document.getElementById("userInput").value;
+function enviarTextoCifrado() { //se traen lo elementos del doc
+  let textoCifrado=document.getElementById("userInput").value; 
   let desplazamiento=document.getElementById("desplazamiento").value;
   let userOutput=document.getElementById("userOutput");
   const resultado=cipher.encode(textoCifrado,desplazamiento);
   document.getElementById("userOutput").value==textoCifrado;
-  userOutput.innerHTML=resultado;  
+  userOutput.innerHTML=resultado;  //elemento.innerHTML para traer el texto
 } 
 );
 

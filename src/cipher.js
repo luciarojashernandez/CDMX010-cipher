@@ -23,15 +23,24 @@
     //    }   
     //     return result;    
     //  }, 
+
+//abcdefghijklmnopqrstuvwxyz
+//hijklmn
     
     encode:function (userInput, desplazamiento) {
+      let offsetEncode = parseInt(desplazamiento);
       let resultEncode = "";
       for(let i=0; i<userInput.length; i++){
         let encodeLetter = userInput.charCodeAt(i);
+        console.log(encodeLetter);
         if (encodeLetter >= 97 && encodeLetter <= 122){
-          resultEncode+=String.fromCharCode((encodeLetter-97+desplazamiento)%26+97);
+          let operacion=(((encodeLetter+offsetEncode)-97)%26)+97;
+          resultEncode+=String.fromCharCode(operacion);
+          console.log("operacion", operacion); 
         }else if(encodeLetter >= 65 && encodeLetter <=90){
-          resultEncode+=String.fromCharCode((encodeLetter-65+desplazamiento)%26+65);
+          let operacion=(((encodeLetter+offsetEncode)-65)%26)+65;
+          resultEncode+=String.fromCharCode(operacion);
+          console.log("operacion", operacion);
         }else if (encodeLetter===32){
           resultEncode+=String.fromCharCode(32);
         }
@@ -39,13 +48,17 @@
     },
 
     decode: function (userOutput, desplazamiento) {
+      let offsetDecode = parseInt(desplazamiento)
       let resultDecode = "";
       for(let i=0; i<userOutput.length; i++){
         let decodeLetter = userOutput.charCodeAt(i);
         if (decodeLetter >= 97 && decodeLetter <= 122){
-          resultDecode+=String.fromCharCode((decodeLetter-97-desplazamiento+26)%26+97);
+          let operacion=(((decodeLetter-97)+(26-offsetDecode))%26)+97;
+          resultDecode+=String.fromCharCode(operacion);
+          console.log(operacion);
         }else if (decodeLetter>=65 && decodeLetter<=90){
-          resultDecode+=String.fromCharCode((decodeLetter-65-desplazamiento+26)%26+65);
+          let operacion=(((decodeLetter-65)+(26-offsetDecode))%26)+65;
+          resultDecode+=String.fromCharCode(operacion);
         }else if (decodeLetter===32){
           resultDecode+=String.fromCharCode(32);
         }
